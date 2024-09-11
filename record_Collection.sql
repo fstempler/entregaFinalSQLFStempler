@@ -37,14 +37,14 @@ CREATE TABLE record_condition(
     PRIMARY KEY(id_condition)
 );
 
-CREATE TABLE edition(
+CREATE TABLE edition (
     id_edition int(11) NOT NULL AUTO_INCREMENT,
     edition_name varchar(255),
     id_year int(11) DEFAULT NULL,
     id_record int(11) DEFAULT NULL,
     id_condition int(11) DEFAULT NULL,
     PRIMARY KEY(id_edition),
-    FOREIGN KEY(id_year) REFERENCES year(id_year),
+    FOREIGN KEY(id_year) REFERENCES release_year(id_year),
     FOREIGN KEY(id_record) REFERENCES record(id_record),
-    FOREIGN KEY(id_condition) REFERENCES condition(id_condition)
+    FOREIGN KEY(id_condition) REFERENCES record_condition(id_condition)
 );

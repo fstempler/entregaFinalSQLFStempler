@@ -24,13 +24,13 @@ CREATE TABLE record(
     FOREIGN KEY(id_artist) REFERENCES artist(id_artist)
 );
 
-CREATE TABLE year(
+CREATE TABLE release_year(
     id_year int(11) NOT NULL AUTO_INCREMENT,
     year int(11) NOT NULL,
     PRIMARY KEY(id_year)
 );
 
-CREATE TABLE condition(
+CREATE TABLE record_condition(
     id_condition int(11) NOT NULL AUTO_INCREMENT,
     condition_name varchar(45) NOT NULL,
     description TEXT,
